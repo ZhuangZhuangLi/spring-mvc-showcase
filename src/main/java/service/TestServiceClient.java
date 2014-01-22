@@ -10,12 +10,12 @@ public class TestServiceClient {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		  TestServiceImpl impl=new TestServiceImpl();
-	      String ADDRESS = "http://localhost:9000/ws"; 
-	      System.out.println("service start:");  
-	      Endpoint.publish(ADDRESS, impl);
+//	      String ADDRESS = "http://localhost:9000/ws"; 
+//	      System.out.println("service start:");  
+//	      Endpoint.publish(ADDRESS, impl);
 		  JaxWsProxyFactoryBean factoryBean = new JaxWsProxyFactoryBean();  
 	      factoryBean.setServiceClass(TestService.class);  
-	      factoryBean.setAddress("http://localhost:9000/ws");  
+	      factoryBean.setAddress("http://localhost:8080/spring-mvc-showcase/ws/cxf");  
 	          
 	      TestService testService = (TestService)factoryBean.create();  
 	      System.out.println(""+testService.excute("Tom"));  
